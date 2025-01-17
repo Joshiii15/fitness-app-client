@@ -32,10 +32,22 @@ const Login = () => {
       localStorage.setItem("access", response.data.access);
       notyf.success("Logged in successfully");
       setIsLoggedIn(true);
-      navigate("/workouts");
 
-      if (!response) {
-        console.log("failed to fetch");
+      // Fetch workouts after login
+      const token = response.data.access;
+      const workoutsResponse = await axios.get(
+        "https://fitnessapp-api-ln8u.onrender.com/workouts/getMyWorkouts",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      if (workoutsResponse.data.workouts.length === 0) {
+        navigate("/addWorkout");
+      } else {
+        navigate("/workouts");
       }
     } catch (error) {
       console.error(error.response.data.message);
