@@ -21,6 +21,11 @@ const Login = () => {
         {
           email,
           password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
       );
       console.log(response);
