@@ -18,6 +18,7 @@ const Login = () => {
     try {
       const response = await axios.post(
         "https://fitnessapp-api-ln8u.onrender.com/users/login",
+        // "http://localhost:4000/users/login",
         {
           email,
           password,
@@ -37,6 +38,7 @@ const Login = () => {
       const token = localStorage.getItem("access");
       const workoutsResponse = await axios.get(
         "https://fitnessapp-api-ln8u.onrender.com/workouts/getMyWorkouts",
+        // "http://localhost:4000/workouts/getMyWorkouts",
         {
           headers: {
             Authorization: `Bearer ${token}`,

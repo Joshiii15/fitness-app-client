@@ -16,6 +16,7 @@ const Register = () => {
     try {
       const response = await axios.post(
         "https://fitnessapp-api-ln8u.onrender.com/users/register",
+        // "http://localhost:4000/users/register",
         {
           email,
           password,
