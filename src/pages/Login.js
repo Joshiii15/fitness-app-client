@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://fitnessapp-api-ln8u.onrender.com/users/login",
+        "https://fitnessapp-api-ln8u.onrender.com",
         {
           email,
           password,
