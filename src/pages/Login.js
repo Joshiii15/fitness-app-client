@@ -34,7 +34,7 @@ const Login = () => {
       setIsLoggedIn(true);
 
       // Fetch workouts after login
-      const token = response.data.access;
+      const token = localStorage.getItem("access");
       const workoutsResponse = await axios.get(
         "https://fitnessapp-api-ln8u.onrender.com/workouts/getMyWorkouts",
         {
