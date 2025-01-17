@@ -9,7 +9,7 @@ const Workouts = () => {
     const fetchWorkouts = async () => {
       const token = localStorage.getItem("access");
       const response = await axios.get(
-        "https://fitnessapp-api-ln8u.onrender.com",
+        "https://fitnessapp-api-ln8u.onrender.com/workouts/getMyWorkouts",
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -20,7 +20,7 @@ const AddWorkout = () => {
       console.log(decodedToken);
       const userId = decodedToken.id;
       const response = await axios.post(
-        "https://fitnessapp-api-ln8u.onrender.com",
+        "https://fitnessapp-api-ln8u.onrender.com/workouts/addWorkout",
         { userId, name, duration },
         {
           headers: {
