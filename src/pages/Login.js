@@ -23,6 +23,7 @@ const Login = () => {
           password,
         }
       );
+      console.log(response);
       localStorage.setItem("access", response.data.access);
       notyf.success("Logged in successfully");
       setIsLoggedIn(true);
