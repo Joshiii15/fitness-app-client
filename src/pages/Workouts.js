@@ -29,6 +29,7 @@ const Workouts = () => {
       );
       if (userWorkouts.length === 0) {
         setMessage("No workouts yet");
+        setWorkOuts([]);
       } else {
         setWorkOuts(userWorkouts);
       }
