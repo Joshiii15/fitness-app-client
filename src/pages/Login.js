@@ -48,7 +48,7 @@ const Login = () => {
 
       console.log(workoutsResponse);
 
-      if (workoutsResponse.data.message === "No workouts found") {
+      if (workoutsResponse.data.message === "No Workouts found.") {
         navigate("/addWorkout");
       } else {
         navigate("/workouts");
