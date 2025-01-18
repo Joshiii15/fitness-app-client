@@ -24,17 +24,17 @@ const Workouts = () => {
       );
 
       console.log(response);
-      const allWorkouts = response.data.workouts;
-      const userWorkouts = allWorkouts.filter(
-        (workout) => workout.userId === userId
-      );
-      if (userWorkouts.length === 0) {
+
+      if (response.data.message === "No workouts found.") {
         setMessage("No workouts yet");
         setWorkOuts([]);
       } else {
+        const allWorkouts = response.data.workouts;
+        const userWorkouts = allWorkouts.filter(
+          (workout) => workout.userId === userId
+        );
         setWorkOuts(userWorkouts);
       }
-      console.log(response);
     };
     fetchWorkouts();
   }, []);
