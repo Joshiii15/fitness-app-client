@@ -46,6 +46,8 @@ const Login = () => {
         }
       );
 
+      console.log(workoutsResponse);
+
       if (workoutsResponse.data.workouts.length === 0) {
         navigate("/addWorkout");
       } else {
