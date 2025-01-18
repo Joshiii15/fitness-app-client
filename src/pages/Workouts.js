@@ -25,7 +25,7 @@ const Workouts = () => {
 
       console.log(response);
 
-      if (response.data.message === "No workouts found.") {
+      if (response.data.message === "No Workouts found.") {
         setMessage("No workouts yet");
         setWorkOuts([]);
       } else {
