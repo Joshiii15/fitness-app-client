@@ -23,6 +23,7 @@ const Workouts = () => {
         }
       );
 
+      console.log(response);
       const allWorkouts = response.data.workouts;
       const userWorkouts = allWorkouts.filter(
         (workout) => workout.userId === userId
