@@ -15,7 +15,7 @@ const AppNavBar = () => {
 
   return (
     <>
-      <Navbar expand="lg" className="navbar bg-body-tertiary">
+      <Navbar expand="lg" className="navbar bg-body-tertiary" class="navbar">
         <Container>
           <Navbar.Brand>Zuitt Workouts</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
